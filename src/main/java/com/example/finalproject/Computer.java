@@ -8,7 +8,7 @@ public class Computer extends PlayerOne {
 
     public Computer(String name) {
         super(name);
-    } //Not a working AI, just a fake class. This class just does not save player 2's score
+    } //Not a working AI, just a fake class, saves score as computer-score.txt
 
 
 }

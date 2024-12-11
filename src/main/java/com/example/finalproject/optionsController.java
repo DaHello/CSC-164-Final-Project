@@ -15,13 +15,13 @@ public class optionsController {
     File player2Score;
 
     @FXML
-    private Button saveBtn; //saves the scores of both players
+    private Button saveBtn; // saves the scores of both players
 
     @FXML
-    private Text saveTxt; //will change to show if save was successful or not
+    private Text saveTxt; // will change to show if save was successful or not
 
     @FXML
-    void onSaveBtnPressed(ActionEvent event) { //create a save file for player(s)
+    void onSaveBtnPressed(ActionEvent event) { // create a save file for player(s)
         System.out.println(TicTacToeController.players);
 
         createPlayerFile(TicTacToeController.players.get(0), player1Score);
@@ -30,7 +30,7 @@ public class optionsController {
 
     }
 
-    public void createPlayerFile(PlayerOne player, File file ) { //creates a file based off of a name
+    public void createPlayerFile(PlayerOne player, File file ) { // creates a file based off of a name
 
         //create the files in Java: test version
         file = new File("C:\\Users\\rober\\Documents\\CSC164-4C1-All Assignments\\FinalProject\\" + player.getFileName());

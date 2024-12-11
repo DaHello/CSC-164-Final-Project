@@ -22,7 +22,9 @@ import java.io.IOException;
 public class TicTacToeApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TicTacToeApplication.class.getResource("tic-tac-toe-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(
+                TicTacToeApplication.class.getResource("tic-tac-toe-view.fxml")
+        );
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Tic Tac Toe");
         stage.setScene(scene);

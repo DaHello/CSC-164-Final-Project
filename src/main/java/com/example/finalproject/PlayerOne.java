@@ -1,20 +1,21 @@
 package com.example.finalproject;
 
 public class PlayerOne { //super class
-    //the default name of the player, also the name of the file that will be stored, after choosing to save
+    // the default name of the player, also the name of the file that will be stored, after choosing to save
 
     private String name;
-    private int wins = 0, losses = 0; //wins and losses of player 1
+    private int wins = 0, losses = 0;
     private String fileName;
 
     public PlayerOne() {
-
+        // no parameters, create overloaded constructor for name (player 1)
+        this.name = "Player1";
+        this.fileName = name + "-score.txt";
     }
 
     public PlayerOne(String name) {
         this.name = name;
-        //Initialize fileName
-        this.fileName = name + "score.txt";
+        this.fileName = name + "-score.txt";
     }
 
     public int getWins() {

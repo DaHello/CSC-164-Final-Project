@@ -1,1 +1,0 @@
-name='player2', wins=0, losses=0

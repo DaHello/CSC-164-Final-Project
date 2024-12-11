@@ -91,11 +91,11 @@ public class TicTacToeController {
     private Text winnerTxt;
 
     @FXML
-    private int playerTurn = 0;
+    private boolean playerTurn = true; // PlayerOne (X) goes first
 
     private static ArrayList<Button> buttons;
 
-    static ArrayList<PlayerOne> players; // = new ArrayList<>();
+    static ArrayList<PlayerOne> players; // Create a new array list of type: superclass PlayerOne
 
     //accessible from players static ArrayList
     protected PlayerOne player1 = new PlayerOne("player1");;
@@ -189,9 +189,9 @@ public class TicTacToeController {
     }
 
     @FXML
-    void updatePlayer1TxtField(ActionEvent event) { //Change player1 name
+    void updatePlayer1TxtField(ActionEvent event) { // Change player1 name
 
-        if (player1TxtField.getText().equals("")) {
+        if (player1TxtField.getText().isEmpty()) { // if no name entered
             System.out.println("Invalid name entered: player1.");
         } else {
 
@@ -209,7 +209,7 @@ public class TicTacToeController {
     }
 
     @FXML
-    void updatePlayer2TxtField(ActionEvent event) { //change player2 name
+    void updatePlayer2TxtField(ActionEvent event) { // change player2 name WOULD MAKE SENSE TO COMBINE THIS INTO ONE METHOD AND TAKE PLAYER AS PARAMETER
 
         if(player2TxtField.getText().equals("")) {
             System.out.println("Invalid name entered: player2.");
@@ -232,12 +232,9 @@ public class TicTacToeController {
 
     @FXML
     void onResetBtnPressed(ActionEvent event) { //reset buttons
-        //each button is reset, using the resetButton method call
-        buttons.forEach(this::resetButton);
-        //reset game title
-        winnerTxt.setText("Tic-Tac-Toe");
-        //set player turn back to X
-        playerTurn = 0;
+        buttons.forEach(this :: resetButton); // each button is reset, using the resetButton method call
+        winnerTxt.setText("Tic-Tac-Toe"); // reset game title
+        playerTurn = true; // set player turn back to X
     }
 
     void setupButton(Button button) {
@@ -247,17 +244,16 @@ public class TicTacToeController {
 
     public void setPlayerSymbol(Button button) {
 
-        if (playerTurn % 2 == 0) { //set up the button that is pushed
-
-            whosTurnTxt.setText("It is O's turn!");
+        if (playerTurn) { // if PlayerOne's turn (X)
+            whosTurnTxt.setText("It is O's turn!"); // set up the button that is pushed
             button.setText("X");
-            playerTurn = 1; //changes the turn to O
+            playerTurn = false; // changes the turn to PlayerTwo or Computer (O)
 
         } else {
 
             whosTurnTxt.setText("It is X's turn!");
             button.setText("O");
-            playerTurn = 0;
+            playerTurn = true; // set back to X's turn
 
         }
 
