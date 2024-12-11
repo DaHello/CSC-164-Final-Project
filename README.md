@@ -1,2 +1,2 @@
 # CSC-164-Final-Project
-These are my projects from the courses I have taken in college thus far
+This is a Tic-Tac-Toe game I created using JavaFX and Java.
