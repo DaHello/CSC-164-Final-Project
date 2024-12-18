@@ -30,7 +30,7 @@ public class optionsController {
 
     }
 
-    public void createPlayerFile(PlayerOne player, File file ) { // creates a file based off of a name
+    public void createPlayerFile(Player player, File file ) { // creates a file based off of a name
 
         //create the files in Java: test version
         file = new File("C:\\Users\\rober\\Documents\\CSC164-4C1-All Assignments\\FinalProject\\" + player.getFileName());

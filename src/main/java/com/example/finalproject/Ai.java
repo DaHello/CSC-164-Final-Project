@@ -1,12 +1,12 @@
 package com.example.finalproject;
 
-public class Computer extends PlayerOne {
+public class Ai extends Player {
 
-    public Computer() {
+    public Ai() {
         super();
     }
 
-    public Computer(String name) {
+    public Ai(String name) {
         super(name);
     } //Not a working AI, just a fake class, saves score as computer-score.txt
 

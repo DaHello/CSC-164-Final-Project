@@ -9,10 +9,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.TicTacToeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.TicTacToeController">
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <FlowPane layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="201.0">
+         <FlowPane layoutX="200.0" layoutY="100.0" prefHeight="202.0" prefWidth="205.0">
             <children>
                <Button fx:id="btn1" mnemonicParsing="false" onMouseClicked="#onBtn1Pressed" prefHeight="67.0" prefWidth="67.0">
                   <font>
@@ -72,12 +72,12 @@
                <Font size="14.0" />
             </font>
          </Text>
-         <Text fx:id="player2Txt" layoutX="422.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2">
+         <Text fx:id="player2Txt" layoutX="541.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2">
             <font>
                <Font size="14.0" />
             </font>
          </Text>
-         <Text fx:id="whosTurnTxt" layoutX="262.0" layoutY="325.0" onMouseClicked="#onBtn1Pressed" strokeType="OUTSIDE" strokeWidth="0.0" text="It is X's turn!" />
+         <Text fx:id="whosTurnTxt" layoutX="267.0" layoutY="324.0" onMouseClicked="#onBtn1Pressed" strokeType="OUTSIDE" strokeWidth="0.0" text="It is X's turn!" />
          <VBox layoutX="14.0" layoutY="58.0" prefHeight="200.0" prefWidth="100.0">
             <Text fx:id="Txt1" strokeType="OUTSIDE" strokeWidth="0.0" text="(Optional) Enter a custom name for player 1:" textAlignment="CENTER" wrappingWidth="94.13671875">
                <font>
@@ -85,7 +85,7 @@
                </font>
             </Text>
             <TextField fx:id="player1TxtField" />
-            <Button fx:id="player1UpdateNameBtn" mnemonicParsing="false" onAction="#updatePlayer1TxtField" prefHeight="25.0" prefWidth="100.0" text="Update Name" />
+            <Button fx:id="player1UpdateNameBtn" mnemonicParsing="false" onAction="#updatePlayerTextField" prefHeight="25.0" prefWidth="100.0" text="Update Name" />
          </VBox>
          <VBox layoutX="451.0" layoutY="58.0" prefHeight="200.0" prefWidth="100.0">
             <Button fx:id="playAloneBtn" mnemonicParsing="false" onAction="#playAloneBtnPressed" prefHeight="25.0" prefWidth="107.0" text="Play Alone?" />
@@ -97,9 +97,9 @@
             <TextField fx:id="player2TxtField" />
             <Button fx:id="player2UpdateNameBtn" mnemonicParsing="false" onAction="#updatePlayer2TxtField" prefHeight="25.0" prefWidth="100.0" text="Update Name" />
          </VBox>
-         <Text fx:id="player1ScoreTxt" layoutX="24.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1 Score: " />
-         <Text fx:id="player2ScoreTxt" layoutX="401.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2 Score: " textAlignment="RIGHT" />
-         <Button fx:id="optionsBtn" layoutX="255.0" layoutY="16.0" mnemonicParsing="false" onAction="#loadSaveScoresWindow" text="Options" />
+         <Text fx:id="player1ScoreTxt" layoutX="14.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1 Score: " />
+         <Text fx:id="player2ScoreTxt" layoutX="493.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2 Score: " textAlignment="RIGHT" />
+         <Button fx:id="optionsBtn" layoutX="268.0" layoutY="368.0" mnemonicParsing="false" onAction="#loadSaveScoresWindow" text="Options" />
       </AnchorPane>
    </center>
 </BorderPane>

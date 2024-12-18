@@ -6,9 +6,9 @@ Date : 5/05/2022
 Assignment : Final Project
 Notes: Used the code from this video, and made some modifications to it
 https://www.youtube.com/watch?v=fO4KUCtbmq8
- */
 
-// Add a cancel button to option window and clean up code
+this is the main class
+ */
 
 package com.example.finalproject;
 
